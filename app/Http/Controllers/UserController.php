@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Invite;
+use App\Mail\UserInvitation;
+use Illuminate\Support\Facades\Mail;
+
 
 class UserController extends Controller
 {
@@ -29,15 +33,22 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'email' => 'required|email|unique:users,email',
+        ]);
 
+        $user = Invite::create([
+            'email' => $request->email,
+        ]);
+        Mail::to('mirzaatiq145@gmail.com')->send(new UserInvitation());
+        return redirect()->back()->with('success', 'Invitation email has been sent successfully!');
+    }
     /**
      * Display the specified resource.
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
