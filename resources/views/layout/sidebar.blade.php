@@ -28,12 +28,14 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmployees"
-            aria-expanded="true" aria-controls="collapseEmployees">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse"
+            data-target="#collapseEmployeesUserManagement" aria-expanded="false"
+            aria-controls="collapseEmployeesUserManagement">
             <i class="fas fa-fw fa-cog"></i>
             <span>User Management</span>
         </a>
-        <div id="collapseEmployees" class="collapse" aria-labelledby="headingEmployees" data-parent="#accordionSidebar">
+        <div id="collapseEmployeesUserManagement" class="collapse" aria-labelledby="headingEmployeesUserManagement"
+            data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header"></h6>
                 <a class="collapse-item" href="{{ url('users') }}">Users</a>
@@ -41,6 +43,23 @@
             </div>
         </div>
     </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePermissions"
+            aria-expanded="false" aria-controls="collapsePermissions">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Permissions and Access Control</span>
+        </a>
+        <div id="collapsePermissions" class="collapse" aria-labelledby="headingPermissions"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header"></h6>
+                <a class="collapse-item" href="#">Roles/Permissions</a>
+            </div>
+        </div>
+    </li>
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
 
     </li>
 

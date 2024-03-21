@@ -13,7 +13,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h4>User
-                                <a href="" class="btn btn-primary" style="float: right;"> Invite User</a>
+                                <a href="{{ url('users/create') }}" class="btn btn-primary" style="float: right;"> Invite User</a>
                             </h4>
                         </div>
                         <div class="card-body">
@@ -52,3 +52,4 @@
         </div>
     </section>
 @stop
+
